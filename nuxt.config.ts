@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-11-18',
   ssr: true,
   modules: ['@nuxt/eslint'],
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/fonts.css', '~/assets/css/main.css'],
   typescript: {
     strict: true,
   },
