@@ -53,7 +53,7 @@ export const buttonTheme = tv(
         variant: 'ghost',
         color: 'neutral',
         class:
-          'bg-transparent text-neutral-400 hover:bg-neutral-700 hover:text-neutral-100 active:bg-neutral-700/80',
+          'bg-transparent text-neutral-100 hover:bg-neutral-700 active:bg-neutral-700/80',
       },
       {
         size: 'md',

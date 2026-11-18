@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseName, parsePage } from './params'
+import { paginationQuery, parseName, parsePage, searchQuery } from './params'
 
 describe('parsePage', () => {
   it('defaults to page one and accepts positive whole numbers', () => {
@@ -20,5 +20,20 @@ describe('parseName', () => {
   it('trims a single name and ignores non-string query values', () => {
     expect(parseName('  Rick Sanchez  ')).toBe('Rick Sanchez')
     expect(parseName(['Rick'])).toBe('')
+  })
+})
+
+describe('query builders', () => {
+  it('trims submitted search and omits an empty filter', () => {
+    expect(searchQuery(' Rick ')).toEqual({ name: 'Rick' })
+    expect(searchQuery('   ')).toEqual({ name: undefined })
+  })
+
+  it('preserves the search on pagination and omits page one', () => {
+    expect(paginationQuery(3, 'Rick')).toEqual({ name: 'Rick', page: '3' })
+    expect(paginationQuery(1, '')).toEqual({
+      name: undefined,
+      page: undefined,
+    })
   })
 })

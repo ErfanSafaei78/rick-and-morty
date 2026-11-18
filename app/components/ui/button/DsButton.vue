@@ -16,7 +16,11 @@
       class="size-4 shrink-0 animate-spin rounded-full border-2 border-current border-t-transparent motion-reduce:animate-none"
       aria-hidden="true"
     />
-    <span v-else-if="$slots.start" class="shrink-0" aria-hidden="true">
+    <span
+      v-else-if="$slots.start"
+      class="inline-flex shrink-0 items-center justify-center"
+      aria-hidden="true"
+    >
       <slot name="start" />
     </span>
 
@@ -24,7 +28,11 @@
       <slot />
     </span>
 
-    <span v-if="!loading && $slots.end" class="shrink-0" aria-hidden="true">
+    <span
+      v-if="!loading && $slots.end"
+      class="inline-flex shrink-0 items-center justify-center"
+      aria-hidden="true"
+    >
       <slot name="end" />
     </span>
   </component>
@@ -38,7 +46,7 @@ import type {
   DsButtonEmits,
   DsButtonProps,
   DsButtonSlots,
-} from './button.types'
+} from './button.types.d'
 
 const props = withDefaults(defineProps<DsButtonProps>(), {
   variant: 'solid',
