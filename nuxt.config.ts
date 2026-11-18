@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-11-18',
   ssr: true,
   modules: ['@nuxt/eslint', '@nuxt/image'],
+  image: {
+    domains: ['rickandmortyapi.com'],
+  },
   css: [
     '~/assets/css/fonts.css',
     '~/assets/css/main.css',
