@@ -1,8 +1,10 @@
 import { computed } from 'vue'
 import { buttonTheme } from './button.theme'
-import type { DsButtonProps, DsButtonSlots } from './button.types'
-
-type ButtonElement = 'button' | 'NuxtLink' | 'a' | 'span'
+import type {
+  ButtonElement,
+  DsButtonProps,
+  DsButtonSlots,
+} from './button.types.d'
 
 export function useButton(
   props: Readonly<DsButtonProps>,

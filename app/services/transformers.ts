@@ -1,5 +1,5 @@
-import type { Character } from '~/types/api'
-import type { CharacterView } from '~/types/view'
+import type { Character } from '~/types/api.types'
+import type { CharacterView } from '~/types/view.types'
 
 export const toCharacterView = (character: Character): CharacterView => ({
   id: character.id,

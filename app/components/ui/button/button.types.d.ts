@@ -9,6 +9,7 @@ export type DsButtonRadius = 'sm' | 'full'
 export type DsButtonSize = 'md' | 'sm'
 
 export type DsButtonType = 'button' | 'submit' | 'reset'
+export type ButtonElement = 'button' | 'NuxtLink' | 'a' | 'span'
 
 export interface DsButtonProps {
   variant?: DsButtonVariant

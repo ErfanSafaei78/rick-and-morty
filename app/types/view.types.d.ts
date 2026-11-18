@@ -1,4 +1,4 @@
-import type { Character } from './api'
+import type { Character } from './api.types'
 
 export interface CharacterView {
   id: number

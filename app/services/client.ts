@@ -1,5 +1,3 @@
-export type RequestOptions = { signal?: AbortSignal }
-
 export const createApiClient = (
   baseURL: string,
   fetcher: typeof $fetch = $fetch,

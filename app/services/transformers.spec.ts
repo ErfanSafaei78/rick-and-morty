@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { Character } from '~/types/api'
+import type { Character } from '~/types/api.types'
 import { toCharacterView } from './transformers'
 
 describe('toCharacterView', () => {
