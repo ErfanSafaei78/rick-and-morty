@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { CharacterCardProps } from '~/types/character-list.types'
+import type { CharacterCardProps } from './character-list.types'
 
 const props = withDefaults(defineProps<CharacterCardProps>(), {
   priority: false,

@@ -1,31 +1,30 @@
 <template>
-  <div>
+  <div class="flex flex-col gap-4">
     <h1 class="sr-only">Rick and Morty characters</h1>
-    <div
-      class="relative isolate bg-gradient-to-r from-neutral-900 from-header-start to-neutral-950 px-4 pb-6 pt-1.5 md:-mt-1 md:pt-0"
-    >
+    <div class="max-md:px-4">
       <CharacterSearch
         v-model="draft"
         class="mx-auto max-w-[1608px]"
         @submit="submit"
       />
     </div>
-    <section
-      aria-label="Characters"
-      class="mx-auto max-w-[1608px] px-4 pb-8 pt-8 md:px-0 md:pb-16 md:pt-16"
-    >
-      <CharacterGridSkeleton v-if="status === 'pending'" />
-      <CharacterListError v-else-if="status === 'error'" @retry="refresh" />
-      <template v-else-if="pageData?.characters.length">
-        <CharacterGrid :characters="pageData.characters" />
-        <CharacterPagination
-          class="mt-6"
-          :current-page="pageData.currentPage"
-          :total-pages="pageData.totalPages"
-          :name="name"
-        />
-      </template>
-      <CharacterListEmpty v-else />
+    <section aria-label="Characters" class="w-full bg-neutral-900">
+      <div
+        class="w-full mx-auto max-w-[1608px] px-4 pb-8 pt-8 md:px-0 md:pb-16 md:pt-16"
+      >
+        <CharacterGridSkeleton v-if="status === 'pending'" />
+        <CharacterListError v-else-if="status === 'error'" @retry="refresh" />
+        <template v-else-if="pageData?.characters.length">
+          <CharacterGrid :characters="pageData.characters" />
+          <CharacterPagination
+            class="mt-6"
+            :current-page="pageData.currentPage"
+            :total-pages="pageData.totalPages"
+            :name="name"
+          />
+        </template>
+        <CharacterListEmpty v-else />
+      </div>
     </section>
   </div>
 </template>

@@ -1,9 +1,9 @@
 import type { Character } from '~/types/api.types'
-import type { CharacterPageView } from '~/types/character-list.types'
+import type { CharacterPageView } from './character-list.types'
 import type { Paginated } from '~/types/pagination.types'
-import type { RequestOptions } from './client.types'
-import { api } from './client'
-import { toCharacterView } from './transformers'
+import type { RequestOptions } from '../client.types'
+import { api } from '../client'
+import { toCharacterView } from '../transformers'
 
 /** Returns null for an API 404 (no matches or page beyond the result set). */
 export async function getCharacterPage(

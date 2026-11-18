@@ -105,7 +105,7 @@ import DsButton from '~/components/ui/button/DsButton.vue'
 import DsIcon from '~/components/ui/icon/DsIcon.vue'
 import { usePagination } from '~/composables/character-list/usePagination'
 import { paginationQuery } from '~/composables/character-list/params'
-import type { CharacterPaginationProps } from '~/types/character-list.types'
+import type { CharacterPaginationProps } from './character-list.types'
 
 const props = defineProps<CharacterPaginationProps>()
 const items = usePagination(

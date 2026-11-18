@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CharacterGridProps } from '~/types/character-list.types'
+import type { CharacterGridProps } from './character-list.types'
 import CharacterCard from './CharacterCard.vue'
 
 defineProps<CharacterGridProps>()

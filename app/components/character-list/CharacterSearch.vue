@@ -34,7 +34,7 @@ import DsInput from '~/components/ui/input/DsInput.vue'
 import type {
   CharacterSearchEmits,
   CharacterSearchProps,
-} from '~/types/character-list.types'
+} from './character-list.types'
 
 defineProps<CharacterSearchProps>()
 const emit = defineEmits<CharacterSearchEmits>()

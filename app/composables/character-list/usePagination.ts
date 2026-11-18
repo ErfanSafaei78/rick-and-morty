@@ -1,5 +1,5 @@
 import type { Ref } from 'vue'
-import type { PaginationItem } from '~/types/character-list.types'
+import type { PaginationItem } from './character-list.types'
 
 export const getPaginationItems = (
   currentPage: number,

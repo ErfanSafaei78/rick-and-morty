@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { idFromUrl } from './url'
+import { idFromResourceUrl, idFromUrl } from './url'
 
 describe('idFromUrl', () => {
   it('extracts a character id from an API URL', () => {
@@ -15,5 +15,25 @@ describe('idFromUrl', () => {
       idFromUrl('https://rickandmortyapi.com/api/character/9007199254740992'),
     ).toBeNull()
     expect(idFromUrl('')).toBeNull()
+  })
+})
+
+describe('idFromResourceUrl', () => {
+  it('extracts episode and location ids only from their matching resources', () => {
+    expect(
+      idFromResourceUrl('https://rickandmortyapi.com/api/episode/3', 'episode'),
+    ).toBe(3)
+    expect(
+      idFromResourceUrl(
+        'https://rickandmortyapi.com/api/location/8',
+        'location',
+      ),
+    ).toBe(8)
+    expect(
+      idFromResourceUrl(
+        'https://rickandmortyapi.com/api/episode/3',
+        'location',
+      ),
+    ).toBeNull()
   })
 })

@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import DsButton from '~/components/ui/button/DsButton.vue'
-import type { CharacterListErrorEmits } from '~/types/character-list.types'
+import type { CharacterListErrorEmits } from './character-list.types'
 
 const emit = defineEmits<CharacterListErrorEmits>()
 </script>

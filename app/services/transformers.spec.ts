@@ -11,20 +11,13 @@ describe('toCharacterView', () => {
       species: 'Human',
       type: '',
       gender: 'Male',
-      origin: {
-        name: 'Earth',
-        url: 'https://rickandmortyapi.com/api/location/1',
-      },
-      location: {
-        name: 'Earth',
-        url: 'https://rickandmortyapi.com/api/location/1',
-      },
+      origin: { name: 'Earth', url: '' },
+      location: { name: 'Earth', url: '' },
       image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-      episode: ['https://rickandmortyapi.com/api/episode/1'],
+      episode: [],
       url: 'https://rickandmortyapi.com/api/character/1',
-      created: '2017-11-04T18:48:46.250Z',
+      created: '',
     }
-
     expect(toCharacterView(character)).toEqual({
       id: 1,
       name: 'Rick Sanchez',

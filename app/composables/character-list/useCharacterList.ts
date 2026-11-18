@@ -1,4 +1,4 @@
-import { getCharacterPage } from '~/services/character-list'
+import { getCharacterPage } from '~/services/character-list/character-list'
 import { cachedInMemory } from '~/utils/cache'
 import { parseName, parsePage } from './params'
 
