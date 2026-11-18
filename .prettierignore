@@ -1,0 +1,15 @@
+*
+!app/
+!app/**
+!*.ts
+!*.mjs
+!package.json
+!tsconfig.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!.prettierrc
+!README.md
+node_modules/
+.nuxt/
+.output/
+coverage/
